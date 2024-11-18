@@ -1,0 +1,45 @@
+Aquí tienes una lista de atajos de teclado útiles para utilizar ChatGPT, junto con una explicación de los diferentes usos de los comandos con "@".
+
+Atajos de Teclado
+Los atajos de teclado pueden variar según la plataforma en la que estés usando ChatGPT (como una página web, una aplicación móvil, o un entorno de desarrollo). A continuación se presentan algunos atajos comunes que pueden funcionar en varias interfaces de ChatGPT:
+
+Navegación y Edición
+Ctrl + Enter (o Cmd + Enter en Mac): Enviar mensaje o comando.
+Shift + Enter: Añadir una nueva línea sin enviar el mensaje.
+Ctrl + K (o Cmd + K en Mac): Búsqueda rápida o acceso a comandos específicos.
+Ctrl + Z (o Cmd + Z en Mac): Deshacer la última acción.
+Ctrl + Y (o Cmd + Y en Mac): Rehacer la última acción deshecha.
+Selección y Edición de Texto
+Ctrl + A (o Cmd + A en Mac): Seleccionar todo el texto.
+Ctrl + C (o Cmd + C en Mac): Copiar texto seleccionado.
+Ctrl + V (o Cmd + V en Mac): Pegar texto copiado.
+Ctrl + X (o Cmd + X en Mac): Cortar texto seleccionado.
+Ctrl + F (o Cmd + F en Mac): Buscar texto en el documento.
+Uso de "@" en ChatGPT
+En ChatGPT, el uso de "@" se asocia comúnmente con menciones o comandos específicos en algunos entornos o interfaces. Aquí hay algunos ejemplos de cómo se puede usar:
+
+Menciones
+@user: Mencionar a un usuario específico en una conversación grupal para llamar su atención.
+Comandos Especiales
+@help: Mostrar una lista de comandos o ayuda sobre cómo usar el sistema.
+@settings: Abrir el menú de configuración para ajustar las preferencias del usuario.
+@feedback: Enviar comentarios o reportar un problema.
+Ejemplos de Uso de "@" y Atajos
+Enviar un mensaje con Ctrl + Enter
+Escribe tu mensaje.
+Presiona Ctrl + Enter para enviarlo rápidamente.
+Añadir una nueva línea sin enviar
+Escribe tu mensaje.
+Presiona Shift + Enter para añadir una nueva línea.
+Continúa escribiendo sin enviar el mensaje hasta que estés listo.
+Buscar ayuda rápida
+Escribe @help.
+Presiona Enter para obtener una lista de comandos disponibles o ayuda.
+Ajustar configuraciones
+Escribe @settings. 
+Presiona Enter para abrir el menú de configuración.
+Consejos para una Mejor Experiencia
+Comandos Cortos: Usa comandos cortos y directos con "@" para agilizar la interacción.
+Memoriza Atajos Clave: Memoriza los atajos más utilizados para ahorrar tiempo.
+Usa el Shift + Enter para Escribir Mensajes Largos: Si estás escribiendo un mensaje largo, usa Shift + Enter para mantenerlo organizado y legible.
+Estos atajos y comandos te ayudarán a interactuar de manera más eficiente con ChatGPT, mejorando tu flujo de trabajo y productividad.
