@@ -1,0 +1,56 @@
+Utilizar @Data de Lombok en entidades JPA puede causar problemas cuando tienes relaciones como @OneToMany, @ManyToOne, etc., debido a la manera en que se generan los métodos equals(), hashCode() y toString(). Aquí te explico cuándo es adecuado usarlo y cuándo no:
+
+Problemas al usar @Data en entidades JPA:
+Relaciones bidireccionales:
+
+Si tienes relaciones bidireccionales (@OneToMany + @ManyToOne), @Data genera un toString() que incluye todas las propiedades, lo que puede llevar a:
+StackOverflowError: Por la recursividad infinita cuando toString() intenta serializar ambas entidades (A -> B -> A...).
+Carga innecesaria de datos al intentar convertir la entidad a cadena.
+equals() y hashCode():
+
+Por defecto, @Data genera estos métodos basándose en todos los campos de la entidad, lo cual puede ser problemático:
+Problema de rendimiento: Si usas listas (@OneToMany), comparar estas relaciones puede ser costoso.
+Comportamiento inesperado: En entidades gestionadas por JPA, es mejor basar equals() y hashCode() en identificadores como el id, no en todos los campos.
+Persistencia inconsistente:
+
+Si los métodos generados por @Data manipulan relaciones perezosas (FetchType.LAZY), podrías provocar la carga no intencionada de datos, afectando el rendimiento.
+¿Cuándo NO usar @Data?
+Cuando tienes relaciones complejas (@OneToMany, @ManyToOne, @ManyToMany), especialmente en relaciones bidireccionales.
+Si necesitas personalizar los métodos equals(), hashCode() o toString().
+Cuando trabajas con relaciones perezosas (FetchType.LAZY), para evitar cargar entidades no necesarias.
+¿Cuándo puedes usar @Data?
+Si la entidad:
+No tiene relaciones, o tiene relaciones unidireccionales simples (por ejemplo, solo @ManyToOne).
+No se usa como clave primaria compuesta ni depende de comparaciones personalizadas.
+Si el proyecto es pequeño y las relaciones son básicas, podrías usarlo con precaución.
+Alternativa recomendada:
+En lugar de @Data, combina otras anotaciones de Lombok para un mejor control:
+
+Usa @Getter y @Setter: Para generar getters y setters.
+Define equals() y hashCode() manualmente o usa @EqualsAndHashCode(onlyExplicitlyIncluded = true):
+java
+Copy code
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@Getter
+@Setter
+@Entity
+public class Restaurant {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @EqualsAndHashCode.Include
+    private Long id;
+    
+    private String name;
+
+    @ManyToOne
+    @JoinColumn(name = "district_id")
+    private District district;
+}
+Personaliza toString(): Usa @ToString con exclusiones si es necesario.
+java
+Copy code
+@ToString(exclude = "district")
+Resumen:
+Usa @Data solo si no tienes relaciones complejas en la entidad.
+En entidades JPA con relaciones, evita @Data y usa anotaciones más controladas como @Getter, @Setter, @EqualsAndHashCode, y @ToString.
+Siempre revisa cómo se generan equals() y hashCode() en entidades JPA para evitar problemas con Hibernate.
