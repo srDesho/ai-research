@@ -1,0 +1,25 @@
+Error:Maven resources compiler: Maven project configuration required for module 'restaurant-reservation-api' isn't available. Compilation of Maven projects is supported only if external build is started from an IDE.
+
+2/2
+
+ChatGPT said:
+ChatGPT
+Este error indica que tu IDE (probablemente IntelliJ IDEA o Eclipse) no está reconociendo correctamente tu proyecto como un proyecto de Maven. Esto sucede cuando hay problemas de configuración o cuando el proyecto no está sincronizado con Maven.
+
+Aquí te dejo una guía para solucionar este problema:
+
+1. Forzar la sincronización del proyecto con Maven
+En IntelliJ IDEA
+Abrir el panel de Maven:
+
+Ve a View > Tool Windows > Maven para abrir el panel de Maven en el lado derecho del IDE.
+Sincronizar Maven:
+
+Haz clic en el botón de "Reload All Maven Projects" (parece dos flechas en círculo) en el panel de Maven.
+Alternativamente, haz clic derecho en el archivo pom.xml en el proyecto y selecciona "Reload Maven Project".
+Comprobar que el proyecto es un proyecto Maven:
+
+Ve a File > Project Structure > Modules y asegúrate de que tu módulo aparece con el tipo Maven.
+Si no aparece, elimina el módulo y vuelve a agregarlo como un proyecto Maven:
+Haz clic en File > New > Module from Existing Sources.
+Selecciona el archivo pom.xml de tu proyecto.
