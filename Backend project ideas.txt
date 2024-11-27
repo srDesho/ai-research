@@ -1,0 +1,4 @@
+1.- Create a API (Application Programming Interface) with CRUD, test unit and documentation.
+2.- Socket application with Real-time Chat and documentation.
+3.- Backend for an E-commerce site, roles, users authorization and authentication.
+4.- Backend for a Social network(red social), microservices for processing of likes or comments and content recommendations.
