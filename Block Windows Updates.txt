@@ -1,0 +1,84 @@
+
+En Windows 11 Home, las actualizaciones automáticas pueden ser difíciles de desactivar permanentemente debido a las políticas de Microsoft. Sin embargo, puedes intentar métodos más avanzados para bloquear Windows Update de forma más efectiva. Aquí te detallo varias soluciones alternativas:
+
+Método 1: Usar un Script de Registro Permanente
+Puedes usar un script de PowerShell para deshabilitar Windows Update permanentemente. Aquí está el script:
+
+Abre Bloc de Notas y copia lo siguiente:
+powershell
+Copy code
+@echo off
+sc stop wuauserv
+sc config wuauserv start= disabled
+sc stop bits
+sc config bits start= disabled
+sc stop dosvc
+sc config dosvc start= disabled
+pause
+Guarda este archivo con la extensión .bat (por ejemplo, DesactivarWindowsUpdate.bat).
+
+Haz clic derecho sobre el archivo y selecciona Ejecutar como administrador.
+
+Este script detendrá y deshabilitará los servicios relacionados con Windows Update.
+
+Si quieres reactivar Windows Update en el futuro, crea otro archivo .bat con este contenido:
+
+powershell
+Copy code
+@echo off
+sc config wuauserv start= auto
+sc config bits start= auto
+sc config dosvc start= auto
+net start wuauserv
+net start bits
+net start dosvc
+pause
+
+
+
+Método 2: Usar un Bloqueo de Firewall
+Puedes bloquear las conexiones de Windows Update a través del Firewall de Windows. Haz lo siguiente:
+
+Abrir Firewall con seguridad avanzada:
+
+Presiona Win + R, escribe wf.msc y presiona Enter.
+Crear nueva regla de salida:
+
+En el menú izquierdo, selecciona Reglas de salida y haz clic en Nueva regla.
+Configurar la regla:
+
+Selecciona Programa y presiona Siguiente.
+Especifica la ruta de Windows Update (normalmente C:\Windows\System32\svchost.exe) y presiona Siguiente.
+Elige Bloquear la conexión.
+Aplica la regla en los perfiles Dominio, Privado y Público.
+Dale un nombre (por ejemplo, Bloqueo Windows Update) y guarda la regla.
+Esto bloqueará las actualizaciones incluso si los servicios se reinician.
+
+- Si usamos el método 2, Para poder actualizar se debe hacer los sgte:
+
+ChatGPT
+Si decides usar el método de bloquear el acceso a los servidores de Windows Update desde el firewall, para reactivar las actualizaciones manualmente más adelante debes seguir estos pasos:
+
+Pasos para reactivar Windows Update temporalmente:
+Desbloquear en el Firewall:
+
+Abre el Firewall de Windows Defender con seguridad avanzada.
+Ve a las reglas que creaste para bloquear las conexiones salientes de Windows Update.
+Desactiva (o elimina temporalmente) esas reglas.
+Esto permitirá que tu sistema vuelva a conectarse a los servidores de Windows Update.
+Iniciar el Servicio de Windows Update:
+
+Abre la aplicación Servicios (puedes buscarla como "services.msc").
+Busca el servicio Windows Update.
+Haz clic derecho y selecciona Iniciar.
+Ejecutar Actualizaciones Manualmente:
+
+Ve a Configuración > Windows Update.
+Haz clic en el botón de Buscar actualizaciones y permite que el sistema descargue e instale las actualizaciones necesarias.
+Volver a Bloquear Windows Update (si lo deseas):
+
+Una vez que se completen las actualizaciones, puedes volver a habilitar las reglas de bloqueo en el firewall para prevenir futuras actualizaciones automáticas.
+Consideraciones:
+Riesgos de desactivarlo permanentemente: Mantener Windows Update deshabilitado por mucho tiempo puede hacer que tu sistema sea vulnerable a amenazas de seguridad. Es importante habilitar las actualizaciones periódicamente para asegurarte de que estás protegido contra vulnerabilidades.
+Actualizaciones opcionales: Incluso con este método, puedes instalar manualmente actualizaciones críticas o de características en el momento que elijas.
+Si tienes dudas o necesitas pasos más detallados, házmelo saber y con gusto te ayudo.
