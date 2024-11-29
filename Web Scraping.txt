@@ -1,0 +1,22 @@
+¿qué temas debo aprender para luego pasarme al web scraping?
+
+ChatGPT
+Para adentrarte en el mundo del web scraping, es útil tener un conocimiento básico de los siguientes temas:
+
+HTML y CSS: Estos son los lenguajes fundamentales para crear páginas web. HTML se utiliza para estructurar el contenido de una página web, mientras que CSS se utiliza para estilizar y dar formato a ese contenido. Comprender cómo están estructuradas las páginas web te ayudará a identificar y extraer la información que necesitas mediante web scraping.
+
+HTTP y URLs: Es importante entender cómo funciona el protocolo HTTP y cómo se utilizan las URLs para solicitar y acceder a recursos en la web. Debes conocer los diferentes métodos HTTP (GET, POST, etc.) y los códigos de estado (como 200, 404, etc.).
+
+JavaScript: Muchas páginas web modernas utilizan JavaScript para realizar operaciones dinámicas en el lado del cliente, como cargar contenido adicional, actualizar partes de la página sin recargarla, etc. Aunque no es estrictamente necesario ser un experto en JavaScript para hacer web scraping, tener un conocimiento básico te ayudará a lidiar con el contenido dinámico y las páginas generadas por JavaScript.
+
+XPath y Selectores CSS: Estos son métodos para seleccionar elementos específicos en un documento XML o HTML. Son herramientas poderosas que te permiten especificar con precisión qué partes de una página web deseas extraer durante el proceso de scraping.
+
+Regular Expressions (Expresiones Regulares): A veces necesitarás realizar búsquedas más complejas y flexibles en el texto de una página web para encontrar la información que deseas. Las expresiones regulares son una herramienta poderosa para hacer esto.
+
+Python (o el lenguaje de tu elección): Aunque no es estrictamente necesario usar Python para hacer web scraping, es una opción muy popular debido a su simplicidad y a la gran cantidad de bibliotecas disponibles para ello, como BeautifulSoup y Scrapy.
+
+Una vez que tengas una comprensión básica de estos temas, estarás bien preparado para comenzar a explorar el mundo del web scraping y aprender más sobre las técnicas y herramientas específicas que se utilizan en esta área. Recuerda también respetar siempre los términos de servicio y las políticas de uso aceptable de los sitios web que estés raspando.
+
+
+
+
