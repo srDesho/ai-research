@@ -1,0 +1,76 @@
+En un entorno real, seguir las **buenas prácticas** para nombrar rutas de controladores en aplicaciones web es crucial para garantizar claridad, consistencia y facilidad de uso. La convención más comúnmente aceptada (y recomendada) sigue los principios del diseño RESTful. Aquí te detallo cómo deberías nombrar tus rutas:
+
+---
+
+### **Buenas prácticas para nombrar rutas en controladores**
+
+1. **Nombres en plural para recursos:**
+   - Usa nombres en **plural** para representar colecciones o entidades. 
+   - Ejemplo: 
+     - `/users` en lugar de `/user`
+     - `/reservations` en lugar de `/reservation`
+
+2. **Evita verbos en las rutas:**
+   - Los métodos HTTP (`GET`, `POST`, `PUT`, `DELETE`, etc.) ya indican la acción que estás realizando. Por lo tanto, no es necesario incluir verbos como `get`, `create`, `delete` en las rutas.
+   - Ejemplo:
+     - ❌ `/getUsers` (incorrecto)
+     - ✅ `/users` (correcto)
+
+3. **Incluye identificadores en las rutas para operaciones específicas:**
+   - Si necesitas operar sobre un recurso específico, usa su identificador.
+   - Ejemplo:
+     - `/users/{id}` para obtener o actualizar un usuario por su ID.
+     - `/reservations/{reservationId}` para trabajar con una reserva específica.
+
+4. **Agrupa subrecursos relacionados:**
+   - Usa rutas anidadas para indicar relaciones entre recursos.
+   - Ejemplo:
+     - `/users/{userId}/reservations` para listar las reservas de un usuario.
+     - `/restaurants/{restaurantId}/reservations` para listar las reservas de un restaurante.
+
+5. **Usa palabras en inglés:**
+   - En entornos profesionales, las rutas deben estar en inglés para seguir estándares internacionales, incluso si tu aplicación está en español.
+
+6. **Usa kebab-case para separar palabras:**
+   - Si el recurso tiene más de una palabra, usa **guiones bajos** o **kebab-case** para mejorar la legibilidad.
+   - Ejemplo:
+     - `/menu-items` en lugar de `/menuitems` o `/MenuItems`.
+
+---
+
+### **Ejemplo de rutas bien nombradas**
+
+Para un sistema de reservas, las rutas podrían verse así:
+
+| HTTP Method | Ruta                        | Descripción                                   |
+|-------------|-----------------------------|-----------------------------------------------|
+| **GET**     | `/users`                   | Lista todos los usuarios.                    |
+| **POST**    | `/users`                   | Crea un nuevo usuario.                       |
+| **GET**     | `/users/{userId}`          | Obtiene los detalles de un usuario específico. |
+| **PUT**     | `/users/{userId}`          | Actualiza un usuario existente.              |
+| **DELETE**  | `/users/{userId}`          | Elimina un usuario.                          |
+| **GET**     | `/reservations`            | Lista todas las reservas.                    |
+| **POST**    | `/reservations`            | Crea una nueva reserva.                      |
+| **GET**     | `/reservations/{id}`       | Obtiene una reserva específica.              |
+| **GET**     | `/users/{userId}/reservations` | Lista reservas de un usuario.               |
+
+---
+
+### **Errores comunes al nombrar rutas**
+
+- ❌ Usar singular en lugar de plural:
+  - `/user` (incorrecto) → `/users` (correcto)
+  
+- ❌ Añadir verbos en las rutas:
+  - `/getAllUsers` (incorrecto) → `/users` (correcto)
+
+- ❌ No ser consistente:
+  - Mezclar mayúsculas, minúsculas y diferentes estilos (e.g., `/users` vs `/Users`).
+
+- ❌ Usar palabras irrelevantes o largas:
+  - `/the-users-that-are-active` (incorrecto) → `/users/active` (correcto).
+
+---
+
+### **Resumen**
+Nombrar rutas en **plural**, siguiendo las convenciones RESTful, es la mejor práctica. Esto no solo facilita el desarrollo, sino que también hace que tus APIs sean más predecibles y comprensibles para otros desarrolladores en el equipo.
