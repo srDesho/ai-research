@@ -1,0 +1,70 @@
+Virtualización Anidada en Windows LTSC
+
+Sí, Windows LTSC puede soportar virtualización anidada, pero con algunas consideraciones:
+
+    Requisitos de Hardware:
+        Asegúrate de que el hardware de tu sistema (CPU y chipset) soporte la virtualización anidada. La virtualización anidada requiere procesadores que soporten Intel VT-x (para procesadores Intel) o AMD-V (para procesadores AMD).
+
+    Configuración de VirtualBox:
+        Para habilitar la virtualización anidada en VirtualBox, la máquina virtual de VirtualBox que está corriendo debe estar configurada correctamente con las opciones de virtualización activadas. En VirtualBox, ve a la configuración de la máquina virtual y asegúrate de que la opción "Habilitar VT-x/AMD-V" esté activada bajo "Sistema" > "Aceleración".
+
+    Configuración del Host:
+        En el sistema operativo anfitrión (el que está ejecutando VirtualBox), asegúrate de que las opciones de virtualización de hardware están habilitadas en la BIOS/UEFI.
+
+    Actualización del Software:
+        Asegúrate de que tanto VirtualBox como los complementos necesarios estén actualizados a las últimas versiones para asegurar compatibilidad con la virtualización anidada.
+
+    Configuración del Hypervisor:
+        Si tienes Hyper-V habilitado en tu sistema, esto puede interferir con la virtualización anidada. Asegúrate de desactivarlo si estás utilizando VirtualBox, ya que Hyper-V puede interferir con las capacidades de virtualización de otros hipervisores.
+
+    Pruebas en el Sistema Host:
+        Verifica si otros hipervisores, como VMware, permiten la virtualización anidada en tu configuración actual para determinar si el problema está relacionado específicamente con VirtualBox o con la configuración del sistema.
+
+Pasos para Habilitar Virtualización Anidada en Windows LTSC:
+
+    Configura la Máquina Virtual en VirtualBox:
+        En VirtualBox, selecciona tu máquina virtual, ve a "Configuración" > "Sistema" > "Aceleración" y asegúrate de que las opciones de "Habilitar VT-x/AMD-V" y "Habilitar PAE/NX" estén marcadas.
+
+    Habilita la Virtualización Anidada:
+        Usa el siguiente comando en el símbolo del sistema (cmd) como administrador para habilitar la virtualización anidada:
+
+        csharp
+
+        VBoxManage modifyvm "NombreDeTuVM" --nested-hw-virt on
+
+    Reinicia la Máquina Virtual:
+        Después de realizar los cambios, reinicia la máquina virtual para aplicar la nueva configuración.
+
+Si, después de realizar estos pasos, la virtualización anidada sigue sin funcionar, puede que haya un problema específico con la versión de LTSC que estás usando o con la configuración de tu hardware. En este caso, podrías considerar consultar la documentación de soporte de VirtualBox o de Windows para obtener más información.
+
+
+Solución al Problema con VBoxManage en CMD
+
+    Verifica la Instalación de VirtualBox:
+        Asegúrate de que VirtualBox esté instalado correctamente en tu sistema y que no haya habido problemas durante la instalación.
+
+    Añade VirtualBox al PATH de Windows:
+        Debes agregar la ruta de instalación de VirtualBox a la variable de entorno PATH de Windows. Esto permite que Windows encuentre automáticamente los ejecutables de VirtualBox como VBoxManage desde cualquier ubicación en el símbolo del sistema.
+
+    Pasos para Añadir VirtualBox al PATH:
+
+    a. Encuentra la Ruta de Instalación de VirtualBox:
+        Por lo general, VirtualBox se instala en C:\Program Files\Oracle\VirtualBox o C:\Program Files\Oracle\VirtualBox. La ruta exacta puede variar según la configuración de tu sistema y la versión de VirtualBox.
+
+    b. Configura la Variable de Entorno PATH:
+        Haz clic derecho en "Este PC" o "Mi PC" en el Explorador de archivos y selecciona "Propiedades".
+        En la ventana de Propiedades del sistema, haz clic en "Configuración avanzada del sistema" en el panel izquierdo.
+        En la ventana de Propiedades del sistema, ve a la pestaña "Opciones avanzadas" y haz clic en "Variables de entorno".
+        En la sección "Variables del sistema", selecciona la variable de entorno "PATH" y haz clic en "Editar".
+        En la ventana de Edición de variables del sistema, haz clic en "Nuevo" y luego pega la ruta completa de la carpeta donde está instalado VirtualBox (por ejemplo, C:\Program Files\Oracle\VirtualBox).
+        Haz clic en "Aceptar" en todas las ventanas para guardar los cambios y cerrarlas.
+
+    c. Reinicia el Símbolo del Sistema:
+        Cierra cualquier instancia del símbolo del sistema que estés utilizando y abre una nueva ventana del símbolo del sistema. Esto asegura que las nuevas configuraciones de PATH surtan efecto.
+
+    Verifica el Comando:
+        Una vez que hayas añadido la ruta de VirtualBox al PATH, abre una nueva ventana de símbolo del sistema y vuelve a ejecutar el comando VBoxManage modifyvm "Win 10 LTSC" --nested-hw-virt on. Debería ejecutarse sin errores.
+
+Nota:
+
+Si después de seguir estos pasos sigues teniendo problemas para ejecutar VBoxManage, asegúrate de que la instalación de VirtualBox esté completa y que la ruta que agregaste al PATH sea la correcta. Si persisten los problemas, también puedes intentar reiniciar tu computadora para asegurarte de que todos los cambios se apliquen correctamente.
