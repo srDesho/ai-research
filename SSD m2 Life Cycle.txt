@@ -1,0 +1,119 @@
+- My Laptop Asus Tuf15 2022 FA507RE
+
+AMD Ryzen™ 7 6800H Mobile Processor (8-core/16-thread, 20MB cache, up to 4.7 GHz max boost)
+
+NVIDIA® GeForce RTX™ 3050 Ti Laptop GPU, 1745MHz* at 95W (1695MHz Boost Clock+50MHz OC, 80W+15W Dynamic Boost), 4GB GDDR6
+
+Memory
+8GB DDR5-4800 SO-DIMM, Max Capacity:32GB, Support dual channel memory
+8GB DDR5-4800 SO-DIMM x 2, Max Capacity:32GB, Support dual channel memory
+16GB DDR5-4800 SO-DIMM, Max Capacity:32GB, Support dual channel memory
+
+Storage
+512GB PCIe® 3.0 NVMe™ M.2 SSD
+1TB PCIe® 3.0 NVMe™ M.2 SSD
+512GB PCIe® 4.0 NVMe™ M.2 SSD
+
+Battery
+56WHrs, 4S1P, 4-cell Li-ion
+90WHrs, 4S1P, 4-cell Li-ion
+
+- SSD 512GB INTEL 670P M2 2280 PCIE MVME SSDPEKNU512GZ -> this have my laptop Asus Tuf15
+
+Especificaciones
+Colección de productos: Unidad de estado sólido Intel® serie 6
+Capacidad: 512 GB
+Especificaciones sobre rendimiento
+Lectura secuencial (máximo) 3000 MB/s
+Escritura secuencial (máximo) 1600 MB/s
+Alimentación - Activa 80 mW
+Alimentación - Inactiva 25 mW
+Fiabilidad
+Vibración - En funcionamiento 2.17 GRMS (5-700Hz)
+Vibración - No en funcionamiento 1,500 G/0.5 ms
+Choque (en funcionamiento o no en funcionamiento) Operating; 1,000 G/0.5 ms --Non Operation; 1,500 G/0.5 ms
+Rango de temperatura de funcionamiento: 0°C to 70°C
+Temperatura de funcionamiento (máxima): 70 °C
+Temperatura de funcionamiento (mínima): 0 °C
+Clasificación de resistencia (nº de escrituras durante la vida útil): 185 TBW
+Tiempo promedio entre fallos (MTBF): 1.6 million hours
+Tasa de errores de bit incorregibles (UBER) : 1 sector per 10^15 bits read
+Especificaciones del paquete
+Formato: M.2 22 x 80mm
+Interfaz: PCIe 3.0 x4, NVMe
+Tecnologías avanzadas
+Mejoras en la protección contra pérdida de datos y el consumo de energía: No
+Encriptación por hardware: AES 256 bit
+Tecnología de alta resistencia (HET): No
+Supervisión y registro de temperatura: No
+Protección de datos de extremo a extremo: Sí
+Tecnología Intel® de respuesta inteligente: Sí
+Tecnología Intel® Rapid Start: Sí
+Intel® Remote Secure Erase: No
+
+- KINGSTON NV1
+
+Rendimiento NVMe PCIe: NV1 tiene capacidades de lectura/escritura de 2.100/1.700 MB/s1 (en todas las capacidades).
+Ideal para configuraciones con espacio limitado: se integra fácilmente en los diseños con conectores M.2. Perfecta para portátiles finos y PC pequeños.
+Varios tamaños2: disponible en una gama de capacidades de hasta 2 TB para satisfacer las necesidades de almacenamiento de datos.
+Factor Forma:2 2280
+Interfaz: NVMe PCIe Gen 3.0 x 4 Canales
+Tamaños2: 500GB, 1TB, 2TB
+
+Durabilidad3:
+500GB – 120TBW
+1000GB – 240TBW
+2000GB – 480TBW
+
+Consumo:
+500GB: 5mW Idle / 205mW Avg / 1.1W (MAX) Read / 3.3W (MAX) Write
+1000GB: 5mW Idle / 220mW Avg / 1.1W (MAX) Read / 3.3W (MAX) Write
+2000GB: 5mW Idle / 340mW Avg / 1.1W (MAX) Read / 3.3W (MAX) Write
+
+- Samsung 990 EVO 1TB SSD M.2 PCIe 4.0 x4/5.0 x2 NVMe 2.0
+
+Características
+Versión NVMe: 2.0
+Algoritmos de seguridad soportados: 256-bit AES
+Factor de forma de disco SSD: M.2
+SDD, capacidad: 1 TB
+Interfaz: PCI Express 4.0
+Tipo de memoria: V-NAND TLC
+NVMe: Si
+Componente para: Universal
+Encriptación de hardware: Si
+Velocidad de lectura: 5000 MB/s
+Velocidad de escritura: 4200 MB/s
+Carriles datos de interfaz PCI Express: x4
+Tamaño de la unidad SSD M.2: 2280 (22 x 80 mm)
+Revisión PCI Express CEM: 4.0
+Soporte S.M.A.R.T.: Si
+Soporte TRIM: Si
+Tiempo medio entre fallos: 1500000 h
+calificación TBW: 600
+
+- Kingston 1TB NV2 – Disco SSD NVMe PCIe 4.0
+
+Factor de forma	M.2 2280
+Interfaz	PCIe 4.0 x4 NVMe
+Capacidades2	250GB, 500GB, 1TB, 2TB, 4TB
+Velocidad secuencial Lectura/Escritura1	250GB – 3,000/1,300MB/seg
+500GB – 3.500/2.100MB/seg
+1TB – 3.500/2.100MB/seg
+2TB - 4TB – 3.500/2.800MB/seg
+NAND	3D
+
+Resistencia (Total de bytes escritos )3	250GB – 80TB
+500GB – 160TB
+1TB – 320TB
+2TB – 640TB
+4TB – 1280TB
+
+Temperatura de almacenamiento	-40 a 85 °C
+Temperaturas de operación	0 a 70°C
+Dimensiones	22 x 80 x 2.2 mm
+Peso	7g (Todas las capacidades)
+Resistencia a las vibraciones en operación	2.17G (7-800 Hz)
+Resistencia a las vibraciones fuera de operación	20G (20-1000Hz)
+MTBF	2,000,000 horas
+Garantía/soporte técnico4	3 años de garantía limitada con soporte técnico gratuito
