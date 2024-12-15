@@ -1,0 +1,12 @@
+Para descargar archivos MP3 de SoundCloud junto con su portada, título, álbum y artista en Java, puedes utilizar algunas bibliotecas que te ayuden a interactuar con la API de SoundCloud y manejar los metadatos de los archivos de audio. Aquí te dejo algunas sugerencias:
+
+SoundCloud Java API Wrapper: Esta es una biblioteca Java que te permite interactuar con la API de SoundCloud de manera sencilla. Puedes usarla para buscar y descargar pistas de audio de SoundCloud. Sin embargo, deberás implementar la lógica para recuperar la portada del álbum.
+
+Jaudiotagger: Jaudiotagger es una biblioteca Java que te permite leer y escribir metadatos de archivos de audio en varios formatos, incluyendo MP3. Puedes usarla para añadir metadatos como título, álbum y artista a los archivos MP3 que descargues de SoundCloud.
+
+Apache HttpClient: Para realizar solicitudes HTTP a la API de SoundCloud, puedes utilizar Apache HttpClient. Esta biblioteca te permitirá enviar solicitudes HTTP GET para obtener información sobre pistas de audio y descargar los archivos MP3.
+
+Picasso o Glide: Estas son bibliotecas populares de Android para cargar imágenes desde una URL y mostrarlas en una interfaz de usuario. Puedes usar una de estas bibliotecas para descargar y mostrar la portada del álbum en tu aplicación Android.
+
+Estas bibliotecas te proporcionarán las herramientas necesarias para interactuar con la API de SoundCloud, descargar archivos MP3 y gestionar los metadatos de los archivos de audio en tu aplicación Java. Recuerda revisar los términos de servicio y las políticas de uso de SoundCloud para asegurarte de que estás utilizando la API de manera adecuada y respetando los derechos de autor de las canciones que descargues.
+
