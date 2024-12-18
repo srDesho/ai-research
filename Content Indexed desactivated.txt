@@ -1,0 +1,50 @@
+Desactivar la indexación de Windows en tu SSD puede ayudar a reducir las escrituras innecesarias y prolongar la vida útil del disco. Aquí te dejo un paso a paso para desactivar la indexación en Windows 11:
+
+### Desactivar la Indexación de Windows para un SSD
+
+1. **Abrir el Explorador de Archivos**:
+   - Presiona `Windows + E` para abrir el Explorador de Archivos.
+
+2. **Acceder a las Propiedades del SSD**:
+   - En el Explorador de Archivos, haz clic derecho en el icono de tu SSD (normalmente el disco `C:`) y selecciona `Propiedades`.
+
+3. **Desmarcar la Opción de Indexación**:
+   - En la pestaña `General`, desmarca la casilla que dice "Permitir que los archivos de esta unidad tengan el contenido indizado además de las propiedades del archivo".
+   - Luego, haz clic en `Aplicar`.
+
+4. **Aplicar Cambios a Todos los Archivos y Carpetas**:
+   - Aparecerá una ventana de confirmación. Selecciona `Aplicar cambios a la unidad C:\, subcarpetas y archivos` y haz clic en `Aceptar`.
+
+5. **Esperar a que se Apliquen los Cambios**:
+   - El sistema aplicará los cambios. Esto puede tardar un poco dependiendo de la cantidad de archivos en tu SSD.
+
+### Alternativa: Desactivar el Servicio de Indexación de Windows
+
+Otra forma de reducir el impacto de la indexación es desactivar el servicio de indexación por completo.
+
+1. **Abrir el Administrador de Servicios**:
+   - Presiona `Windows + R` para abrir el cuadro de diálogo `Ejecutar`.
+   - Escribe `services.msc` y presiona `Enter`.
+
+2. **Encontrar el Servicio de Indexación**:
+   - En la ventana del Administrador de Servicios, busca `Windows Search` en la lista de servicios.
+
+3. **Desactivar el Servicio de Indexación**:
+   - Haz clic derecho en `Windows Search` y selecciona `Propiedades`.
+   - En el tipo de inicio, selecciona `Deshabilitado`.
+   - Haz clic en `Detener` si el servicio está en ejecución.
+   - Haz clic en `Aceptar` para guardar los cambios.
+
+### Verificación
+
+Para asegurarte de que la indexación está desactivada:
+
+1. **Revisar la Propiedad del Disco**:
+   - Vuelve a las propiedades de tu SSD en el Explorador de Archivos y verifica que la casilla de indexación siga desmarcada.
+
+2. **Verificar el Servicio de Indexación**:
+   - Asegúrate de que el servicio `Windows Search` esté deshabilitado en el Administrador de Servicios.
+
+### Conclusión
+
+Siguiendo estos pasos, habrás desactivado la indexación en tu SSD, lo cual ayudará a reducir las escrituras innecesarias y, en última instancia, a prolongar la vida útil de tu disco.
