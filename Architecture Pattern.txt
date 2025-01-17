@@ -1,0 +1,51 @@
+Ayúdame a crear un proyecto, el cuál será para mi portfolio:
+
+Las tecnologías que manejo son, java, PostgreSql, git y github, spring boot (añadiré Spring security si es necesario recomiendame, Test unitarios con JUnit y Mockito, y Angular(el cuál no sé nada, pero lo aprenderé)
+
+quiero tener un backend ApiRest, y un Front demasiado sencillo, el proyecto trata de hacer control diario del TBW de mi ssd m.2 de mi computadora personal, qué recomiendas?
+es possible que spring se conecte con información de mi hardware y sistema? quiero que cada día se registre los TBW en una fecha y hora específica (si tal día la pc no fue encendida pues no guardará nada, pero si la pc fue encendida en el día pero antes de la hora, quiero que se anote automáticamente al momento de ser encedida justo después de la hora acordada antes de que llegue el siguiente día)
+
+Quiero también que me ayudes en la documentación, a definir los requeremientos, requisitos funcionales, herramientas librerias o lo que se use, objetivos, etc, todo lo que se hace en una documentación profesional pero que no es extensa, en este caso es un proyecto sencillo, no quiero una documentación larga, y quiero que antes de arrancar con el proyecto, me hagas la lista de paquetes(creo que también incluye en la documentación):
+ de esta manera
+com.cristianml
+├── config
+├── controller
+│   ├── dto
+│   │   ├── request
+│   │   └── response
+├── domain
+│   ├── entity
+│   └── enums
+├── exception
+├── mapper
+├── repository
+├── service
+│   ├── impl
+├── persistence
+│   ├── impl
+├── security
+├── utilities
+└── SpringBootRestApplication
+
+o de esta otra manera, recomienda la mejor para este proyecto pequeño:
+com.cristianml
+├── config
+├── controller
+│   ├── MakerController
+│   └── ProductController
+├── domain
+│   ├── entity
+│   └── enums
+├── dto
+│   ├── request
+│   └── response
+├── exception
+├── mapper
+├── repository
+├── service
+│   ├── impl
+├── persistence
+│   ├── impl
+├── security
+├── utilities
+└── SpringBootRestApplication
