@@ -1,0 +1,79 @@
+
+**Backend:**
+
+*   Language:
+    *   Python 14
+    *   Java 8
+    *   c# 3
+    *   PHP 3
+    *   c++ 1
+    *   Goolang 1
+    *   Scala 1
+    *   Kotlin 1
+    *   Elixir 1
+*   Frameworks:
+    *   .net 6
+    *   nodeJS 5
+    *   Spring Boot 3
+    *   ExpressJS 2
+    *   Django 2
+*   Databases:
+    *   MySQL 7
+    *   PostgreSQL 6
+    *   SQL Server 3
+    *   SQL 3
+    *   MongoDb 2
+    *   MariaDB 1
+*   ORM y ODM:
+    *   TypeORM 1
+    *   Sequalize 1
+*   Tecnologías:
+    *   Junit 1
+    *   GraphQL 1
+
+**Frontend:**
+
+*   Language:
+    *   JavaScript 15
+    *   Typescript 3
+    *   Flutter 2
+*   Frameworks:
+    *   nextJS 2
+    *   React Native 3
+    *   Jest 1
+    *   React Testing 1
+*   Frontend:
+    *   React 11
+    *   Angular 4
+    *   Redux 3
+*   Tecnologías:
+    *   Mocha 1
+
+**DevOps:**
+
+*   Tecnologías:
+    *   Azure Pipelines CI/CD 7
+    *   AWS 6
+    *   AZURE 5
+    *   Docker 6
+    *   Kubernetes 3
+    *   GCP 2
+    *   Google Cloud 1
+    *   Cloudera 1
+
+**Agile/Metodologías:**
+
+*   Metodologías:
+    *   M Agile Scrum 8
+    *   Kamban 1
+
+**Diseño/Arquitectura:**
+
+*   Paradigmas:
+    *   Design Patterns 1
+    *   Saas 1
+
+**Seguridad:**
+
+*   Seguridad:
+    *   OAuth 1

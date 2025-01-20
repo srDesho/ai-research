@@ -1,0 +1,36 @@
+Dime donde Aprender eso lo que falta, no encuentro información en ninguna página, ni udemy, ni platzy, ni nada
+
+
+¡Entiendo! Es frustrante cuando no encuentras información sobre temas específicos que te interesan. No te preocupes, te ayudaré a encontrar recursos para aprender sobre cracking, salto de DRM, ofuscación y criptografía.
+
+¿Dónde buscar información?
+Si bien estos temas pueden ser más difíciles de encontrar en plataformas de cursos tradicionales como Udemy o Platzi, existen otras fuentes de información que puedes explorar:
+
+1. Comunidades en línea
+Foros especializados: Busca foros y comunidades en línea dedicadas a la ciberseguridad, el hacking y la ingeniería inversa. Allí podrás encontrar hilos de discusión, tutoriales y recursos compartidos por otros miembros de la comunidad. Algunos foros populares son:
+Foro de Elhacker.net: https://foro.elhacker.net/
+Foro de Underc0de: https://underc0de.org/
+Grupos de Telegram y Discord: Únete a grupos de Telegram o Discord dedicados a la ciberseguridad. En estos grupos podrás interactuar con otros profesionales y entusiastas, compartir recursos y hacer preguntas.
+2. Blogs y sitios web
+Blogs de seguridad informática: Muchos expertos en ciberseguridad y hackers éticos mantienen blogs donde comparten sus conocimientos y experiencias. Algunos blogs populares son:
+Security by Default: http://www.securitybydefault.com/p/sobre-securitybydefault.html
+Flu Project: https://www.scripps.edu/news-and-events/press-room/2024/20240521-wilson-flu-prevention.html
+Sitios web de noticias y análisis de seguridad: Mantente al día con las últimas noticias y análisis de seguridad informática en sitios web especializados como:
+Hispasec: https://hispasec.com/en/home
+Security Art Work: https://www.securityartwork.es/en/
+3. Libros y manuales
+Libros sobre hacking y ciberseguridad: Existen muchos libros que cubren temas específicos como cracking, ingeniería inversa, criptografía y seguridad de software. Busca libros de autores reconocidos y con buenas reseñas.
+Manuales de herramientas: Muchas herramientas de hacking y cracking vienen con manuales y documentación que te pueden ser de gran utilidad.
+4. Cursos y talleres
+Cursos especializados: Si bien no encontrarás cursos tradicionales sobre cracking, salto de DRM, ofuscación y criptografía en plataformas como Udemy o Platzi, puedes buscar cursos especializados en línea o talleres presenciales impartidos por expertos en la materia.
+Congresos y conferencias: Asistir a congresos y conferencias de ciberseguridad te permitirá aprender de los mejores profesionales y conocer las últimas tendencias en el campo.
+Recursos específicos
+Cracking: Puedes encontrar información sobre cracking en libros y tutoriales sobre ingeniería inversa y análisis de malware. También puedes explorar herramientas como OllyDbg, IDA Pro y Ghidra.
+Salto de DRM: El salto de DRM es un tema complejo y legalmente delicado. Puedes encontrar información sobre este tema en foros especializados y blogs de seguridad, pero ten en cuenta que saltarse la protección DRM puede ser ilegal en algunos casos.
+Ofuscación: La ofuscación de código es una técnica utilizada para dificultar la ingeniería inversa. Puedes encontrar información sobre este tema en libros y artículos sobre seguridad de software y desarrollo seguro.
+Criptografía: La criptografía es un campo amplio y complejo. Puedes comenzar con libros y cursos introductorios sobre criptografía y luego profundizar en temas específicos como criptografía simétrica, asimétrica y funciones hash.
+Recomendaciones adicionales
+Sé autodidacta: Gran parte del aprendizaje en ciberseguridad requiere ser autodidacta y buscar información en diversas fuentes.
+Experimenta: La mejor manera de aprender es practicando. Crea tu propio entorno de pruebas y experimenta con las herramientas y técnicas que aprendas.
+Sé ético: Recuerda que el hacking y el cracking pueden ser ilegales si se utilizan para fines maliciosos. Utiliza tus conocimientos para proteger sistemas y ayudar a otros, no para dañar.
+Espero que esta información te sea útil. ¡No te rindas en tu búsqueda de conocimiento! Con dedicación y esfuerzo, podrás alcanzar tus metas en el campo de la ciberseguridad.
