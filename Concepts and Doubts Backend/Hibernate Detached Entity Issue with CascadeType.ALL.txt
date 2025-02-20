@@ -1,0 +1,31 @@
+### **Diferencia entre `CascadeType.ALL` y `CascadeType.MERGE`**
+
+En JPA, los `CascadeType` determinan cómo se propagan las operaciones de persistencia desde una entidad padre a sus entidades relacionadas.  
+
+1. **`CascadeType.ALL`**  
+   - Aplica todas las operaciones de cascada (`PERSIST`, `MERGE`, `REMOVE`, `REFRESH`, `DETACH`).
+   - Esto significa que cualquier cambio en la entidad padre se reflejará automáticamente en las entidades relacionadas.
+   - Problema: Puede causar errores si las entidades relacionadas ya existen en la base de datos y no se están manejando correctamente.
+
+2. **`CascadeType.MERGE`**  
+   - Solo aplica la operación `MERGE`, que actualiza una entidad existente en la base de datos.
+   - Si la entidad ya está en la base de datos, simplemente se sincroniza con la entidad administrada en el contexto de persistencia.
+   - Evita problemas con entidades "detached" (desasociadas del contexto de persistencia), como el error que tuviste.
+
+---
+
+### **Documentación del Error y Solución**
+
+#### **Error**
+- `org.springframework.dao.InvalidDataAccessApiUsageException: detached entity passed to persist`
+- Esto ocurre porque estás tratando de persistir una entidad (`PermissionEntity`) que ya existe en la base de datos, pero no está siendo gestionada dentro del contexto de persistencia de Hibernate.
+- `CascadeType.ALL` intentaba persistir automáticamente todas las entidades relacionadas, incluyendo `PermissionEntity`, lo que generaba el error cuando una ya existía.
+
+#### **Solución**
+- Cambiar `cascade = CascadeType.ALL` a `cascade = CascadeType.MERGE` en las relaciones de `UserEntity` y `RoleEntity`.
+- `CascadeType.MERGE` solo actualiza entidades existentes sin intentar persistirlas si ya existen en la base de datos.
+- Esto evita que Hibernate intente guardar (`persist`) una entidad que ya está en la base de datos, solucionando el error de "detached entity".
+
+---
+
+Si necesitas más detalles, dime y te explico con ejemplos. 🚀
