@@ -1,0 +1,59 @@
+# A qué clases y paquetes no se deben hacer Test Unitarios
+
+## Clases que generalmente no requieren pruebas unitarias
+
+### 1. Clases de modelo y DTOs (Data Transfer Objects)
+- Clases simples con getters y setters sin lógica de negocio
+- POJOs (Plain Old Java Objects) que solo almacenan datos
+- Records en Java 16+
+- Clases generadas por Lombok
+
+### 2. Clases de configuración
+- Configuraciones de Spring/frameworks (@Configuration)
+- Archivos de propiedades o YAML
+- Clases que solo definen beans sin lógica adicional
+
+### 3. Entidades
+- Entidades JPA/Hibernate simples
+- Modelos de base de datos sin lógica personalizada
+
+### 4. Fachadas y delegadores simples
+- Clases que solo delegan llamadas a otros componentes sin lógica adicional
+- Adaptadores que solo transforman datos sin decisiones de negocio
+
+### 5. Código generado automáticamente
+- Código generado por herramientas como QueryDSL, MapStruct, etc.
+- Stubs y proxies generados por frameworks
+
+### 6. Clases de excepciones personalizadas
+- Excepciones que no contienen lógica especial
+
+### 7. Enumeraciones simples
+- Enums que solo definen constantes sin comportamiento
+
+## Paquetes que requieren enfoques alternativos
+
+### 1. Capa de infraestructura
+- Repositorios JPA/JDBC (mejor con pruebas de integración)
+- Clientes de servicios externos (mejor con pruebas de integración o mocks)
+- Clases de acceso a sistemas de archivos
+
+### 2. Controladores y endpoints
+- Controladores REST/MVC (mejor con pruebas de integración)
+- Controladores GraphQL
+- WebSockets
+
+### 3. Integraciones externas
+- Adaptadores para servicios terceros
+- Clientes de APIs externas
+- Implementaciones de WebClients/RestTemplates
+
+## Consideraciones importantes
+
+1. **Enfoque pragmático**: Prioriza las pruebas donde aporten más valor
+2. **Lógica de negocio**: Concentra tus esfuerzos de prueba en el dominio de la aplicación
+3. **Cambios frecuentes**: Prioriza pruebas en código que cambia regularmente
+4. **Complejidad**: Cuanto más compleja la lógica, más importante es probarla
+5. **Riesgo**: Evalúa el impacto potencial de fallos en cada componente
+
+Recuerda que el objetivo de las pruebas unitarias es verificar la lógica de negocio aislada, mientras que las pruebas de integración y funcionales son más adecuadas para verificar la interacción entre componentes.
