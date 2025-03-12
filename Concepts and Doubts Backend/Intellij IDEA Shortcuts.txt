@@ -1,0 +1,172 @@
+¡Entendido! Aquí tienes una lista completa y ordenada de atajos de teclado para IntelliJ IDEA, incluyendo los que ya te proporcioné y los que faltaban, con explicaciones detalladas y pasos para realizar acciones específicas.
+
+**Navegación General:**
+
+* **`Alt + 1`**: Abre o cierra la ventana de la herramienta "Project" (árbol de directorios).
+* **`Ctrl + Tab`**: Cambia entre archivos abiertos recientemente.
+* **`Ctrl + E`**: Muestra la lista de archivos abiertos recientemente.
+* **`Ctrl + N`**: Busca clases por nombre.
+* **`Ctrl + Shift + N`**: Busca archivos por nombre.
+* **`Shift + Shift`**: Busca cualquier cosa (clases, archivos, acciones, símbolos).
+* **`Alt + Flecha izquierda/derecha`**: Navega entre pestañas de archivos.
+* **`Ctrl + Alt + Flecha izquierda/derecha`**: Navega entre archivos abiertos recientemente.
+* **`Ctrl + B`**: Navega a la declaración de un símbolo (clase, método, variable).
+* **`Ctrl + Shift + B`**: Navega a la implementación de un símbolo.
+* **`Alt + F7`**: Busca usos de un símbolo.
+* **`Ctrl + H`**: Muestra la jerarquía de clases.
+* **`Ctrl + Shift + A`**: Busca cualquier acción por nombre (por ejemplo, "Create New Class").
+* **`F12`**: Regresa a la ventana de la herramienta anterior.
+* **`Esc`**: Cierra la ventana de la herramienta activa o el cuadro de diálogo.
+* **`Ctrl + G` (o `Cmd + G` en macOS):** Ir a una línea específica.
+* **`Ctrl + F` (o `Cmd + F`):** Buscar en el archivo actual.
+* **`Ctrl + Shift + F` (o `Cmd + Shift + F`):** Buscar en todo el proyecto.
+* **`Ctrl + R` (o `Cmd + R`):** Reemplazar en el archivo actual.
+* **`Ctrl + Shift + R` (o `Cmd + Shift + R`):** Reemplazar en todo el proyecto.
+* **`Ctrl + P` (o `Cmd + P`):** Mostrar parámetros de un método.
+* **`Ctrl + Q` (o `F1` en macOS):** Mostrar documentación rápida.
+* **`Ctrl + Alt + B` (o `Cmd + Option + B`):** Ir a la implementación concreta.
+* **`Alt + F1`:** Seleccionar en cualquier vista.
+* **`Ctrl + Alt + Home`:** Navegar a la clase relacionada.
+* **`Ctrl + [` / `Ctrl + ]`:** Navegar entre bloques de código.
+* **`Ctrl + F12` (o `Cmd + F12`):** Mostrar estructura del archivo (métodos, campos).
+
+**Navegación por el árbol de directorios (Project View):**
+
+1.  **Abre la ventana de la herramienta "Project"**:
+    * Presiona `Alt + 1`.
+
+2.  **Navega por el árbol de directorios**:
+    * Usa las teclas de flecha arriba y abajo para moverte entre los elementos.
+    * Usa la tecla de flecha derecha para expandir un directorio y la tecla de flecha izquierda para contraerlo.
+    * Presiona `Enter` para abrir un archivo o directorio.
+
+3.  **Crea un nuevo elemento (paquete, directorio, clase, etc.)**:
+    * Selecciona el directorio o paquete donde deseas crear el nuevo elemento.
+    * Presiona `Alt + Insert`.
+    * Usa las teclas de flecha arriba y abajo para seleccionar el tipo de elemento que deseas crear (por ejemplo, "Java Class", "Package").
+    * Presiona `Enter`.
+    * Escribe el nombre del nuevo elemento y presiona `Enter`.
+
+**Edición de código:**
+
+* **`Ctrl + Espacio`**: Autocompletar código.
+* **`Ctrl + Alt + L`**: Formatear código.
+* **`Ctrl + /`**: Comentar/descomentar línea.
+* **`Ctrl + Shift + /`**: Comentar/descomentar bloque.
+* **`Alt + Enter`**: Mostrar acciones de intención y correcciones rápidas.
+* **`Ctrl + D`**: Duplicar línea o selección.
+* **`Ctrl + Y`**: Eliminar línea.
+* **`Shift + F6`**: Renombrar símbolo (clase, método, variable).
+* **`Ctrl + Alt + M`**: Extraer método.
+* **`Ctrl + Alt + V`**: Extraer variable.
+* **`Ctrl + Alt + F`**: Extraer campo.
+* **`Ctrl + Alt + C`**: Extraer constante.
+* **`Ctrl + W`**: Selección inteligente de código (expande la selección paso a paso).
+* **`Ctrl + Shift + W`**: Reducir la selección inteligente de código.
+* **`Alt + Flecha arriba/abajo`**: Mover línea o selección arriba/abajo.
+* **`Ctrl + Shift + U`**: Cambiar mayúsculas/minúsculas.
+* **`Ctrl + J`**: Insertar plantilla de código.
+* **`Ctrl + Shift + Enter` (o `Cmd + Shift + Enter`):** Completar sentencia.
+* **`Ctrl + Alt + O` (o `Cmd + Option + O`):** Optimizar imports.
+* **`Ctrl + Alt + I`:** Auto-indentar línea(s).
+* **`Ctrl + Shift + J`:** Combinar líneas.
+* **`Ctrl + Enter`:** Insertar nueva línea.
+* **`Ctrl + Shift + V` (o `Cmd + Shift + V`):** Pegar desde el historial del portapapeles.
+* **`Ctrl + Alt + Shift + L` (o `Cmd + Option + Shift + L`):** Reformatear código con diálogo.
+* **`Tab` / `Shift + Tab`:** Indentar / Desindentar línea(s).
+* **`Ctrl + Alt + Shift + J`:** selección multiple.
+* **`Alt + J` (Windows/Linux) o `Option + J` (macOS)**: Seleccionar todas las palabras iguales.
+* **`Ctrl + Shift + Alt + J` (o `Command + Ctrl + G` en macOS).**: Seleccionar todas las ocurrencias a la vez.
+
+**Refactorización:**
+
+* **`Shift + F6`**: Renombrar.
+* **`Ctrl + Alt + M`**: Extraer método.
+* **`Ctrl + Alt + V`**: Extraer variable.
+* **`Ctrl + Alt + F`**: Extraer campo.
+* **`Ctrl + Alt + C`**: Extraer constante.
+* **`Ctrl + Alt + N`**: Inline variable.
+* **`F5`:** Copiar.
+* **`F6`:** Mover.
+* **`Alt + Delete`:** Borrado seguro.
+* **`Ctrl + Alt + T` (o `Cmd + Option + T`):** Rodea con (try/catch, if, etc.).
+* **`Ctrl + Alt + Shift + T` (o `Cmd + Option + Shift + T`):** Mostrar menú de refactorización.
+
+**Ejecución y depuración:**
+
+* **`Shift + F10`**: Ejecutar configuración de ejecución actual.
+* **`Shift + F9`**: Depurar configuración de depuración actual.
+* **`F9`**: Reanudar depuración.
+* **`F8`**: Paso a paso sobre.
+* **`F7`**: Paso a paso dentro.
+* **`Shift + F8`**: Paso a paso fuera.
+* **`Ctrl + F8`**: Alternar punto de interrupción.
+* **`Ctrl + Shift + F8`**: Ver puntos de interrupción.
+* **`Alt + F9`**: Ejecutar hasta el cursor.
+* **`Ctrl + Shift + F10` (o `Ctrl + Option + R`):** Ejecutar contexto.
+* **`Ctrl + Alt + R`:** Ejecutar cualquier cosa.
+* **`Ctrl + Alt + D`:** Depurar cualquier cosa.
+* **`Alt + Shift + F9`:** Elegir y depurar.
+* **`Alt + Shift + F10`:** Elegir y ejecutar.
+* **`Ctrl + Shift + F9`:** Compilar selección.
+* **`Alt + F8`**: Evaluar expresión.
+* **`Ctrl + Alt + F9`:** Ejecutar hasta el cursor.
+
+**Control de versiones (Git):**
+
+¡Perfecto! Continuemos con la lista completa de atajos de teclado para IntelliJ IDEA, asegurándonos de que esté ordenada, completa y con explicaciones detalladas.
+
+**Control de versiones (Git) (Continuación):**
+
+* **`Ctrl + T`**: Actualizar proyecto (pull).
+* **`Alt + 9`**: Abrir ventana de la herramienta "Version Control".
+* **`Ctrl + V` (o `Cmd + V`):** VCS operations popup.
+* **`Alt + \``:** Cambio rápido de lista de esquemas.
+* **`Ctrl + Alt + Z` (o `Cmd + Option + Z`):** Rollback.
+
+**Ventanas de Herramientas:**
+
+* **`Alt + Número`**: Abre la ventana de la herramienta correspondiente (por ejemplo, `Alt + 1` para "Project", `Alt + 4` para "Run").
+* **`Esc`**: Cierra la ventana de la herramienta activa.
+* **`Alt + 2`:** Favoritos.
+* **`Alt + 3`:** Buscar.
+* **`Alt + 4`:** Ejecutar.
+* **`Alt + 5`:** Depurar.
+* **`Alt + 6`:** Problemas.
+* **`Alt + 7`:** Estructura.
+* **`Alt + 8`:** Servicios.
+* **`Alt + 0`:** Cambiar vista de herramientas.
+
+**Otros Atajos Útiles:**
+
+* **`Ctrl + Alt + S` (o `Cmd + Comma`):** Abrir configuración.
+* **`Ctrl + Shift + S` (o `Cmd + Shift + S`):** Guardar todo.
+* **`Ctrl + Tab`:** Cambiar entre ventanas de herramientas.
+* **`Ctrl + \``:** Cambiar esquema de teclado.
+* **`Ctrl + Shift + Alt + U`:** Mostrar diagrama UML.
+* **`Ctrl + Shift + Space`:** Auto completar tipo.
+* **Doble `Shift`:** Buscar en todas partes.
+* **`Alt + Insert`**: Generar código (constructores, getters, setters, etc.).
+* **`Ctrl + Alt + Y`**: Sincronizar.
+* **`Ctrl + Shift + F7`**: Resaltar usos en el archivo.
+* **`Alt + Shift + C`**: Ver cambios recientes.
+* **`Ctrl + Shift + I`**: Vista rápida de la definición.
+* **`Ctrl + Alt + U`**: Mostrar diagrama de dependencias.
+* **`Ctrl + Shift + Alt + F`**: Buscar usos en la ventana "Find".
+* **`Ctrl + Alt + Shift + I`**: Inspeccionar código.
+* **`Ctrl + Alt + Shift + S`**: Configuración del proyecto.
+* **`Ctrl + Alt + Shift + V`**: Pegar simple.
+* **`Ctrl + Alt + Shift + N`**: Ir a símbolo.
+* **`Ctrl + Alt + Shift + B`**: Ir a la implementación de la interfaz.
+* **`Ctrl + Alt + Shift + G`**: Buscar usos en la ventana "Grouped".
+* **`Ctrl + Alt + Shift + E`**: Ver excepciones recientes.
+* **`Ctrl + Alt + Shift + D`**: Depurar configuración.
+* **`Ctrl + Alt + Shift + C`**: Copiar ruta de referencia.
+* **`Ctrl + Alt + Shift + A`**: Buscar acción avanzada.
+* **`Ctrl + Alt + Shift + 1-9`**: Marcar marcadores anónimos.
+* **`Ctrl + Alt + 1-9`**: Ir a marcadores anónimos.
+* **`Ctrl + Shift + 1-9`**: Marcar marcadores numéricos.
+* **`Ctrl + 1-9`**: Ir a marcadores numéricos.
+* **`Ctrl + Shift + Alt + 1-9`**: Ir a marcadores numéricos con selección.
+* **`Ctrl + Shift + Alt + Click`**: Agregar selección rectangular.
+* **`
