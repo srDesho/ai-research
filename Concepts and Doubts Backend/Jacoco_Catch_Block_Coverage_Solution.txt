@@ -1,0 +1,170 @@
+**Título para archivo:**  
+`Jacoco_Catch_Block_Coverage_Solution.txt`
+
+**Documentación Completa del Problema y Solución:**
+
+---
+
+### **1. Problema Original**
+
+**Contexto:**  
+El reporte de cobertura de JaCoCo no reflejaba la cobertura real del bloque `catch` en la clase `Utilities.java`, mostrando falsos negativos a pesar de existir pruebas.
+
+**Código Problemático Original:**
+
+```java
+// Utilities.java (Versión con error)
+public static ResponseEntity<Object> generateResponse(HttpStatus status, String mensaje) {
+    Map<String, Object> map = new HashMap<>();
+    try {
+        if (status == null) throw new NullPointerException("Status cannot be null");
+        
+        map.put("fecha", new Date());
+        map.put("status", status.value());
+        map.put("mensaje", mensaje);
+        return new ResponseEntity<>(map, status);
+        
+    } catch (Exception e) {
+        map.clear();
+        map.put("fecha", new Date());
+        map.put("status", HttpStatus.INTERNAL_SERVER_ERROR.value());
+        map.put("mensaje", e.getMessage());
+        return new ResponseEntity<>(map, status); // ERROR: Usaba 'status' en lugar de HTTP 500
+    }
+}
+```
+
+```java
+// Test Inefectivo (Versión inicial)
+@Test(expected = Exception.class)
+public void testGenerateResponse_WithInternalServerError() {
+    assertThrows(Exception.class, () -> {
+        Utilities.generateResponse(null, "error");
+    });
+}
+```
+
+---
+
+### **2. Problemas Clave Identificados**
+
+| Problema | Consecuencia | Evidencia en Código |
+|----------|--------------|---------------------|
+| **1. Status incorrecto en catch** | Se devolvía el status original en lugar de `INTERNAL_SERVER_ERROR` | `return new ResponseEntity<>(map, status);` |
+| **2. Prueba con `assertThrows`** | Evitaba la ejecución del flujo completo del `catch` | `assertThrows` capturaba la excepción antes del return |
+| **3. Validaciones faltantes** | No se verificaba el cuerpo de la respuesta de error | Falta de asserts para `fecha`, `status`, y `mensaje` |
+
+---
+
+### **3. Solución Implementada**
+
+**A. Corrección en `Utilities.java`:**
+```java
+// Versión corregida (Cambio clave en la línea 32)
+} catch (Exception e) {
+    map.clear();
+    map.put("fecha", new Date());
+    map.put("status", HttpStatus.INTERNAL_SERVER_ERROR.value());
+    map.put("mensaje", e.getMessage());
+    return new ResponseEntity<>(map, HttpStatus.INTERNAL_SERVER_ERROR); // Fix: Status 500 explícito
+}
+```
+
+**B. Pruebas Mejoradas:**
+```java
+@Test
+public void testGenerateResponse_ErrorFlow() {
+    // Arrange
+    HttpStatus nullStatus = null;
+    String testMessage = "Test error";
+    
+    // Act
+    ResponseEntity<Object> response = Utilities.generateResponse(nullStatus, testMessage);
+    
+    // Assert
+    assertEquals(HttpStatus.INTERNAL_SERVER_ERROR, response.getStatusCode());
+    
+    @SuppressWarnings("unchecked")
+    Map<String, Object> body = (Map<String, Object>) response.getBody();
+    
+    assertNotNull(body.get("fecha"));
+    assertEquals(500, body.get("status")); // Verifica el código numérico
+    assertTrue(body.get("mensaje").toString().contains("Status cannot be null"));
+}
+```
+
+**C. Configuración de JaCoCo (pom.xml):**
+```xml
+<plugin>
+    <groupId>org.jacoco</groupId>
+    <artifactId>jacoco-maven-plugin</artifactId>
+    <version>0.8.11</version>
+    <executions>
+        <execution>
+            <id>coverage-report</id>
+            <phase>test</phase>
+            <goals>
+                <goal>report</goal>
+            </goals>
+            <configuration>
+                <excludes>
+                    <exclude>**/config/**</exclude>
+                    <exclude>**/model/**</exclude>
+                </excludes>
+            </configuration>
+        </execution>
+    </executions>
+</plugin>
+```
+
+---
+
+### **4. Lecciones Aprendidas**
+
+1. **Validación de Flujos de Error**:  
+   Las pruebas deben ejecutar el código *hasta el return* del `catch`, no solo hasta la ocurrencia de la excepción.
+
+2. **Patrón para Pruebas de Catch**:  
+   ```java
+   // 1. Forzar el error
+   // 2. Verificar el estado HTTP
+   // 3. Validar el cuerpo de la respuesta
+   ```
+
+3. **JaCoCo y Bloques Try-Catch**:  
+   - El plugin requiere que los tests ejecuten físicamente las líneas del `catch`.
+   - `assertThrows` no es adecuado para excepciones manejadas internamente.
+
+4. **Best Practice**:  
+   ```java
+   // En lugar de:
+   assertThrows(Exception.class, () -> method());
+   
+   // Preferir:
+   var result = methodThatHandlesException();
+   assert(result.hasErrorState());
+   ```
+
+---
+
+### **5. Verificación Final**
+
+**Resultado Esperado en JaCoCo:**
+```
+Utilities.java
+- Lines: 100% covered
+- Branches: 100% covered 
+- Instructions: 100% covered
+```
+
+**Comando para Verificación:**
+```bash
+mvn clean test jacoco:report && open target/site/jacoco/index.html
+```
+
+--- 
+
+**Nota:** Si persisten discrepancias en el reporte, ejecutar:  
+```bash
+mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install -Djacoco.reset=true
+```
