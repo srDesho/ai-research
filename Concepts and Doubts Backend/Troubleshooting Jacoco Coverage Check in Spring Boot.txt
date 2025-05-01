@@ -1,0 +1,111 @@
+# **Troubleshooting Jacoco Coverage Check in Spring Boot**  
+
+## **Problema Encontrado**  
+El proyecto Spring Boot mostraba un error en las verificaciones de cobertura de Jacoco, a pesar de que el reporte indicaba un 100% de cobertura. El mensaje de error era:  
+
+```
+Coverage checks have not been met. See log for details.
+```
+
+## **Causas del Problema**  
+1. **Exclusiones mal configuradas**: Las exclusiones solo se aplicaban al goal `report`, pero no al goal `check`.  
+2. **Configuración insuficiente**: Solo se verificaba la cobertura de líneas (`LINE`), pero no otros contadores importantes como `BRANCH`.  
+3. **Umbral demasiado bajo (3%)**: Aunque el mínimo era bajo, el error persistía debido a exclusiones no aplicadas correctamente.  
+4. **Posible conflicto de versiones**: Se usaba Jacoco `0.8.12`, que podría tener comportamientos inesperados.  
+
+## **Solución Implementada**  
+
+### **1. Configuración Completa del `pom.xml`**  
+Se corrigió la configuración de Jacoco para:  
+- Aplicar exclusiones tanto en `report` como en `check`.  
+- Usar `BUNDLE` en lugar de `PACKAGE` para una verificación más amplia.  
+- Definir umbrales realistas (80% líneas, 50% ramas).  
+- Asegurar que las exclusiones cubran todos los paquetes no relevantes.  
+
+```xml
+<plugin>
+    <groupId>org.jacoco</groupId>
+    <artifactId>jacoco-maven-plugin</artifactId>
+    <version>0.8.11</version>
+    <executions>
+        <execution>
+            <goals>
+                <goal>prepare-agent</goal>
+            </goals>
+        </execution>
+        <execution>
+            <id>report</id>
+            <phase>test</phase>
+            <goals>
+                <goal>report</goal>
+            </goals>
+            <configuration>
+                <excludes>
+                    <exclude>**/controllers/*</exclude>
+                    <exclude>**/models/**</exclude>
+                    <exclude>**/repository/**</exclude>
+                    <exclude>**/config/**</exclude>
+                    <exclude>**/dto/**</exclude>
+                    <exclude>**/exception/**</exclude>
+                    <exclude>**/SpringBootRestApplication.class</exclude>
+                </excludes>
+            </configuration>
+        </execution>
+        <execution>
+            <id>jacoco-check</id>
+            <goals>
+                <goal>check</goal>
+            </goals>
+            <configuration>
+                <rules>
+                    <rule>
+                        <element>BUNDLE</element>
+                        <limits>
+                            <limit>
+                                <counter>LINE</counter>
+                                <value>COVEREDRATIO</value>
+                                <minimum>0.80</minimum> <!-- 80% -->
+                            </limit>
+                            <limit>
+                                <counter>BRANCH</counter>
+                                <value>COVEREDRATIO</value>
+                                <minimum>0.50</minimum> <!-- 50% -->
+                            </limit>
+                        </limits>
+                        <excludes>
+                            <exclude>com.cristianml.controllers.*</exclude>
+                            <exclude>com.cristianml.models.*</exclude>
+                            <exclude>com.cristianml.repository.*</exclude>
+                            <exclude>com.cristianml.config.*</exclude>
+                            <exclude>com.cristianml.dto.*</exclude>
+                            <exclude>com.cristianml.exception.*</exclude>
+                            <exclude>com.cristianml.SpringBootRestApplication</exclude>
+                        </excludes>
+                    </rule>
+                </rules>
+            </configuration>
+        </execution>
+    </executions>
+</plugin>
+```
+
+### **2. Pasos Adicionales para Validar**  
+- **Limpiar y reconstruir el proyecto**:  
+  ```bash
+  mvn clean install
+  ```  
+- **Verificar logs detallados**:  
+  ```bash
+  mvn verify -X
+  ```  
+- **Revisar informe de cobertura**:  
+  Abrir `target/site/jacoco/index.html` para confirmar qué clases afectan la cobertura.  
+
+## **Conclusión**  
+El error se resolvió asegurando que:  
+✅ Las exclusiones aplicaran tanto para `report` como para `check`.  
+✅ Se usara `BUNDLE` en lugar de `PACKAGE`.  
+✅ Se definieran umbrales realistas (`LINE: 80%`, `BRANCH: 50%`).  
+✅ Se excluyeran correctamente paquetes no relevantes (`controllers`, `models`, `repository`, etc.).  
+
+Con estos cambios, Jacoco ya no marca errores falsos y el build pasa correctamente. 🚀
