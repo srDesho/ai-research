@@ -1,0 +1,37 @@
+Crear una Api para Google Books API
+
+¡Entendido! Vamos a repasar cómo obtener la API Key y cómo configurar tus variables en application.properties, y luego te explicaré nuevamente por qué se crea RestTemplate como un Bean.
+
+Cómo conseguir la API Key de Google Books
+Necesitas una cuenta de Google Cloud y habilitar la API de Google Books. Aquí te dejo los pasos detallados:
+
+Accede a Google Cloud Console:
+
+Abre tu navegador y ve a: https://console.cloud.google.com/
+Inicia sesión con tu cuenta de Google.
+Crea o Selecciona un Proyecto:
+
+En la parte superior de la página, junto al logo de "Google Cloud", haz clic en el selector de proyectos.
+Si no tienes un proyecto, haz clic en "Nuevo Proyecto" y sigue las instrucciones para crearlo (dale un nombre, etc.).
+Si ya tienes proyectos, selecciona el que quieras usar para tu aplicación.
+Habilita la API de Google Books:
+
+Una vez dentro de tu proyecto, en el menú de navegación lateral izquierdo (o en el buscador), busca "APIs y servicios" y luego haz clic en "Biblioteca".
+En la biblioteca de APIs, busca "Google Books API" en la barra de búsqueda.
+Haz clic en "Google Books API" en los resultados.
+En la página de la API, haz clic en el botón "Habilitar" (Enable). Esto puede tardar unos segundos.
+Crea tus Credenciales (API Key):
+
+Una vez que la API esté habilitada, verás un botón "Ir a Credenciales" (Go to Credentials) o puedes ir directamente a "APIs y servicios" > "Credenciales" en el menú de navegación.
+En la página de Credenciales, haz clic en "+ Crear credenciales" (Create Credentials) y selecciona "Clave de API" (API Key).
+
+selecciona "Datos públicos" para crear tu clave de API!
+
+Google Cloud generará automáticamente una nueva clave de API. Cópiala inmediatamente porque no podrás verla completa de nuevo (solo los últimos caracteres).
+¡Importante (Seguridad)!: Aunque la clave de API ya está funcional, es crucial que la restrinjas. Haz clic en "Mostrar clave" y luego en "Restringir clave" para:
+Restricciones de aplicación: Si tu backend es el único que usa esta clave, puedes restringirla a una dirección IP de tu servidor. Si la usas desde un frontend web, deberías restringirla a los dominios de donde provienen las solicitudes.
+Restricciones de API: Selecciona "Google Books API" para asegurarte de que esta clave solo pueda ser utilizada para esta API específica.
+Guarda los cambios de las restricciones.
+Pega la API Key en tu application.properties:
+
+Copia la clave generada y pégala en tu archivo application.properties como se explica en la siguiente sección.
