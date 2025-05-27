@@ -1,0 +1,10 @@
+Explicación de @Modifying
+@Modifying es una anotación de Spring Data JPA que se utiliza junto con @Query para indicar que una consulta personalizada (escrita en JPQL o SQL nativo) modificará el estado de la base de datos.
+
+Propósito: Le dice a Spring Data JPA que la consulta no es solo para seleccionar datos, sino para ejecutar operaciones DML (Data Manipulation Language) como INSERT, UPDATE o DELETE.
+
+Cuándo Usarlo: Es obligatorio cuando tu @Query no es una consulta SELECT. Si intentas ejecutar un UPDATE o DELETE sin @Modifying, Spring Data JPA lanzará un error.
+
+Transaccionalidad: Los métodos que usan @Modifying deben ejecutarse dentro de una transacción. Esto significa que el método de tu servicio que llama al repositorio debe estar anotado con @Transactional. Esto asegura que la operación sea atómica: o se completa por completo, o se revierte si hay un fallo.
+
+En resumen, @Modifying es tu señal para Spring Data JPA de que estás a punto de cambiar datos en la base de datos con tu consulta @Query.
