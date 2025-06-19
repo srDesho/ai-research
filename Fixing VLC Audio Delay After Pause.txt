@@ -1,0 +1,30 @@
+
+
+### **Solución a Problemas de Reproducción de Video en VLC con GPU Dedicada**
+
+**Problema:**
+Al reproducir videos de alta tasa de bits en VLC (como el de la imagen 2x03), se experimentaban parpadeos y cortes de audio al pausar y reanudar. Esto ocurría incluso en un sistema con una GPU potente (RTX 3050 Ti), lo que indicaba un conflicto de software.
+
+**Análisis del Problema:**
+Windows estaba configurado para usar la GPU integrada de bajo consumo energético del procesador para la aplicación VLC, en lugar de la GPU dedicada de alto rendimiento (RTX 3050 Ti). La GPU integrada no podía manejar eficientemente la decodificación de videos con una alta tasa de bits, lo que provocaba los fallos.
+
+**Solución:**
+Se forzó a Windows a usar la GPU dedicada NVIDIA para el reproductor VLC. Esto garantiza que la decodificación de video sea manejada por el hardware diseñado para ello.
+
+**Pasos de la Solución (en Windows):**
+
+1.  Abre **Configuración de Gráficos de Windows**.
+    * `Configuración > Sistema > Pantalla > Gráficos`.
+
+2.  Agrega el ejecutable de VLC.
+    * Haz clic en **Examinar** y busca `vlc.exe` (ubicado comúnmente en `C:\Program Files\VideoLAN\VLC\vlc.exe`).
+
+3.  Selecciona la preferencia de GPU.
+    * En la lista de aplicaciones, haz clic en VLC y luego en **Opciones**.
+    * Cambia la opción de **"Let Windows decide (Power saving)"** a **"High performance"**.
+
+4.  Guarda y reinicia VLC.
+    * Haz clic en **Guardar** y reinicia el reproductor para que los cambios surtan efecto.
+
+**Resultado:**
+La reproducción de videos de alta calidad ahora es fluida, sin parpadeos ni cortes de audio, ya que la GPU dedicada NVIDIA se encarga de la decodificación, optimizando el rendimiento.
