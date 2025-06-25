@@ -1,0 +1,1 @@
+ New-Item -ItemType File -Name "notes-for-requesting-fake-data-to-an-ai-sql.md"
